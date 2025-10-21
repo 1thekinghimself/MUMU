@@ -20,7 +20,9 @@ app = FastAPI(title="MUMU Backend")
 # CORS - allow your frontend origin during development
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[" "file://","https://mumu-chat.vercel.app""],
+    allow_origins=[ "http://localhost",
+        "http://127.0.0.1",             
+        "https://mumu-ai.vercel.app",],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
